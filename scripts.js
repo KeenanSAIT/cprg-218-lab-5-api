@@ -1,61 +1,56 @@
-// Function to fetch Pokémon data from PokeAPI
+// Function to fetch Pokémon data from the PokeAPI
 async function fetchPokemonData(pokemonName) {
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-        const data = await response.json();
-        return data;
+        if (!response.ok) {
+            throw new Error('Pokemon not found');
+        }
+        const pokemonData = await response.json();
+        return pokemonData;
     } catch (error) {
-        console.error('Error fetching Pokémon data:', error);
+        console.error('Error fetching Pokemon data:', error);
     }
 }
  
-// Function to populate dropdown with Pokémon names
-async function populateDropdown() {
-    const selectElement = document.getElementById("pokemonSelect");
-    try {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=150");
+// Function to display Pokémon details in a card
+async function displayPokemonDetails(pokemonName, cardId) {
+    const pokemonData = await fetchPokemonData(pokemonName);
+    // Display Pokémon details in the specified card
+    const card = document.getElementById(cardId);
+    card.querySelector('h3').textContent = pokemonData.name.charAt(0).toUpperCase() + pokemonData.name.slice(1);
+    card.querySelector('img').src = pokemonData.sprites.front_default;
+    card.querySelector('img').alt = pokemonData.name;
+    card.querySelector('p:nth-of-type(1) span').textContent = pokemonData.height;
+    card.querySelector('p:nth-of-type(2) span').textContent = pokemonData.weight;
+}
+ 
+// Populate the dropdown menu with Pokémon names for each card
+async function populateDropdowns() {
+    const dropdowns = document.querySelectorAll('.pokemon-select');
+    dropdowns.forEach(async dropdown => {
+        // Fetch a list of Pokémon
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1000');
         const data = await response.json();
-        data.results.forEach(pokemon => {
-            const option = document.createElement("option");
+        const pokemons = data.results;
+        // Populate the dropdown with Pokémon names
+        pokemons.forEach(pokemon => {
+            const option = document.createElement('option');
             option.value = pokemon.name;
-            option.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-            selectElement.appendChild(option);
+            option.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1); // Capitalize first letter
+            dropdown.appendChild(option);
         });
-    } catch (error) {
-        console.error('Error fetching Pokémon list:', error);
-    }
+    });
 }
  
-// Function to display Pokémon details
-async function displayPokemonDetails(pokemonName) {
-    const pokemonDetailsDiv = document.getElementById("pokemonDetails");
-    pokemonDetailsDiv.style.display = "block";
-    const data = await fetchPokemonData(pokemonName);
-    if (data) {
-        document.getElementById("pokemonName").textContent = data.name.toUpperCase();
-        document.getElementById("pokemonHeight").textContent = data.height;
-        document.getElementById("pokemonWeight").textContent = data.weight;
-        const abilities = data.abilities.map(ability => ability.ability.name).join(", ");
-        document.getElementById("pokemonAbilities").textContent = abilities;
-    } else {
-        // Clear the details if there's an error or no data
-        document.getElementById("pokemonName").textContent = "";
-        document.getElementById("pokemonHeight").textContent = "";
-        document.getElementById("pokemonWeight").textContent = "";
-        document.getElementById("pokemonAbilities").textContent = "";
-    }
-}
- 
-// Event listener for dropdown change
-document.getElementById("pokemonSelect").addEventListener("change", function() {
-    const selectedPokemon = this.value;
-    if (selectedPokemon) {
-        displayPokemonDetails(selectedPokemon);
-    } else {
-        // Hide details if no Pokémon is selected
-        document.getElementById("pokemonDetails").style.display = "none";
-    }
+// Add event listener to the dropdown menus to display Pokémon details when selected
+document.querySelectorAll('.pokemon-select').forEach(dropdown => {
+    dropdown.addEventListener('change', function() {
+        const selectedPokemon = this.value;
+        if (!selectedPokemon) return; // If no Pokémon selected, do nothing
+        const cardId = this.dataset.card;
+        displayPokemonDetails(selectedPokemon, cardId);
+    });
 });
  
-// Populate dropdown when the page loads
-populateDropdown();
+// Populate the dropdown menus when the page loads
+populateDropdowns();

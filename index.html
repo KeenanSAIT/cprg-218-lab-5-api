@@ -9,239 +9,76 @@
   <link rel="stylesheet" type="text/css" href="styles/global.css">
   <link rel="stylesheet" type="text/css" href="styles/portfolio.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script defer src="portfolioweb"></script>
-  <link rel="icon" type="image/x-icon" href="photographyimages/heroimage.jpg">
+  <script defer src="scripts.js"></script>
 
-  <title>Photography Portfolio - Keenan Fonger</title>
+  <title>Lab 5 API - Keenan Fonger</title>
+</head>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokémon Details</title>
+<link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1>Photography Portfolio</h1>
-      <p>Keenan Fonger</p>
-      <i class="fa fa-camera-retro" aria-hidden="true"style="font-size: 5em;"></i>
-    </div>
-  </div>
-
-  <!DOCTYPE html>
-  <html>
-  <link href='https://fonts.googleapis.com/css?family=Afacad' rel='stylesheet'>
-  <style>
-  body {
-      font-family: 'Afacad';font-size: 22px;
-  }
-  </style>
-  </html>
-
-  <div class="box">
-    WELCOME TO MY PORTFOLIO!
-    <p>Below you will find my mock photography portfolio. It features a variety of different images. Please note that all of these images below are taken from Unsplash.com</p> 
-  </div>
-
+ 
+<h1>Select a Pokémon:</h1>
+ 
+<!-- Dropdown menus for each card -->
+<div class="container">
+<div class="dropdown-container">
+<h3>Pokemon Card 1</h3>
+<select class="pokemon-select" data-card="pokemonCard1">
+<option value="">Select a Pokémon</option>
+<!-- Options will be dynamically added via JavaScript -->
+</select>
+<div class="card" id="pokemonCard1">
+<h3></h3>
+<img src="" alt="">
+<p><strong>Height:</strong> <span></span></p>
+<p><strong>Weight:</strong> <span></span></p>
 </div>
-<section class="container">
-  <ul class="card-container">
-    <li class="card">
-      <img src="photographyimages/portfolio1.jpg" alt="a warm, afternoon dessert with hills and a person">
-      <div class="card-content">
-        <h3 class="subheader">
-          A Warm, Welcoming Picture of the Dessert
-        </h3>
-        <h4 class="header">
-          2018
-        </h4>
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio2.jpg" alt="a white background with a multi-coloured image of plant-like material">
-      <div class="card-content">
-        <h3 class="subheader">
-          A Dynamic Photo of a Fungal Blot
-        </h3>
-        <h4 class="header">
-          2016
-        </h4>
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio3.jpg" alt="a nighttime shot of rainy Tokyo with a woman in the foreground holding an umbrella">
-      <div class="card-content">
-        <h3 class="subheader">
-          Rainy Tokyo
-        </h3>
-        <h4 class="header">
-          2021
-        </h4>
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio4.jpg" alt="a confusing, multi-coloured geometric shape with pink and blues hues">
-      <div class="card-content">
-        <h3 class="subheader">
-          Pink Geometry
-        </h3>
-        <h4 class="header">
-          2023
-        </h4>
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio5.jpg" alt="a close-up of a pink flower with the background blurred">
-      <div class="card-content">
-        <h3 class="subheader">
-          A Pink Flower
-        </h3>
-        <h4 class="header">
-          2011
-        </h4>
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio6.jpg" alt="a top down shot of an ornate city square with people and a compass-like diagram">
-      <div class="card-content">
-        <h3 class="subheader">
-          City Square
-        </h3>
-        <h4 class="header">
-          2015
-        </h4> 
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio7.jpg" alt="a show of two vintage cars, yellow and grey, in a tropical, desert parking lot">
-      <div class="card-content">
-        <h3 class="subheader">
-          Vintage Cars
-        </h3>
-        <h4 class="header">
-          2016
-        </h4>
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio8.jpg" alt="a gourmet dish with seafood and some bread on a white plate">
-      <div class="card-content">
-        <h3 class="subheader">
-          Gourmet Dish
-        </h3>
-        <h4 class="header">
-          2017
-        </h4>
-        </p>
-      </div>
-    </li>
-    <li class="card">
-      <img src="photographyimages/portfolio9.jpg" alt="an antique boat on the ocean during the afternoon">
-      <div class="card-content">
-        <h3 class="subheader">
-          Boat on the Ocean
-        </h3>
-        <h4 class="header">
-          2022
-        </h4>
-        </p>
-      </div>
-    </li>    
-    <li class="card">
-      <img src="photographyimages/portfolio10.jpg" alt="a pink building with windows and tree in the foreground">
-      <div class="card-content">
-        <h3 class="subheader">
-          Pink Building
-        </h3>
-        <h4 class="header">
-          2008
-        </h4>
-        </p>
-      </div>
-    </li> 
-    <li class="card">
-      <div class="card-content">
-        <div class="youtube-video-container">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/moP-FAijdIM" alt="a tutorial of how to use a camera">
-        </iframe>
-        </p>
-      </div>
-    </li>
-  </body>
-
-  <li class="card">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon API Dropdown</title>
-    <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-     
-    <h2>Select a Pokémon:</h2>
-     
-    <!-- Dropdown menu -->
-    <select id="pokemonSelect">
-    <option value="">Select a Pokémon</option>
-    </select>
-     
-    <!-- Display Pokémon details -->
-    <div id="pokemonDetails">
-    <h3>Pokémon Details:</h3>
-    <p><strong>Name:</strong> <span id="pokemonName"></span></p>
-    <p><strong>Height:</strong> <span id="pokemonHeight"></span></p>
-    <p><strong>Weight:</strong> <span id="pokemonWeight"></span></p>
-    <p><strong>Abilities:</strong> <span id="pokemonAbilities"></span></p>
-    </div>
-     
-    <script src="script.js"></script>
-     
-    </body>
-    </html>
-  </li>
-
+</div>
+<div class="dropdown-container">
+<h3>Pokemon Card 2</h3>
+<select class="pokemon-select" data-card="pokemonCard2">
+<option value="">Select a Pokémon</option>
+<!-- Options will be dynamically added via JavaScript -->
+</select>
+<div class="card" id="pokemonCard2">
+<h3></h3>
+<img src="" alt="">
+<p><strong>Height:</strong> <span></span></p>
+<p><strong>Weight:</strong> <span></span></p>
+</div>
+</div>
+<div class="dropdown-container">
+<h3>Pokemon Card 3</h3>
+<select class="pokemon-select" data-card="pokemonCard3">
+<option value="">Select a Pokémon</option>
+<!-- Options will be dynamically added via JavaScript -->
+</select>
+<div class="card" id="pokemonCard3">
+<h3></h3>
+<img src="" alt="">
+<p><strong>Height:</strong> <span></span></p>
+<p><strong>Weight:</strong> <span></span></p>
+</div>
+</div>
+</div>
+ 
+<script src="script.js"></script>
+ 
 </body>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+</html>
 
 
-
-
-
-  <button class="accordion">Portfolio Attributions</button>
-  <div class="panel">
+  <h1>Lab 5 Attributions</h1>
     <ul>
-      <li> <a href="https://unsplash.com/photos/a-blurry-photo-of-red-white-and-blue-lights-crI1AtwV57c">Favicon and Hero Image</a></li>
-      <li> <a href="https://unsplash.com/photos/a-desert-landscape-with-mountains-in-the-background-AQgbiXczUVg">Warm Desert by NEOM</a></li>
-      <li> <a href="https://unsplash.com/photos/a-close-up-of-a-bunch-of-flowers-on-a-white-background-7572K1ubVkM">Fungal Blot by Susan Wilkinson</a></li>
-      <li> <a href="https://unsplash.com/photos/https://unsplash.com/photos/a-group-of-people-walking-down-a-street-holding-umbrellas-RJk8zx1_uMg
-        ">Tokyo by Jezael Melgoza</a></li>
-      <li> <a href="https://unsplash.com/photos/a-multicolored-object-with-a-white-background-2gLpg1CxiBY">Pink Geometry by Eveling Salazar</a></li>
-      <li> <a href="https://unsplash.com/photos/a-close-up-of-a-pink-flower-with-blurry-background-fGt0wY1OYSE">Pink Flower by Aaron Burden</a></li>
-      <li> <a href="https://unsplash.com/photos/a-large-mosaic-with-people-walking-around-it-Ra6aYSlJ_7Q">City Square by Bernardo Lorena Ponte</a></li>
-      <li> <a href="https://unsplash.com/photos/a-yellow-car-parked-in-front-of-a-house-iFD6-B0CmHs">Vintage Cars by Peter Thomas</a></li>
-      <li> <a href="https://unsplash.com/photos/a-white-plate-topped-with-mussels-and-a-slice-of-lemon-A55vhZCfPsI">Food Dish by Lisha Riabinina</a></li>
-      <li> <a href="https://unsplash.com/photos/a-sailboat-sailing-in-the-ocean-at-sunset-SJ9L1CJN5Yk">Boat in Water by Catia Dombaxe</a></li>
-      <li> <a href="https://unsplash.com/photos/a-pink-building-with-a-tree-in-front-of-it-a-_GxRZuRjM">Pink Town by Juan Domenech</a></li>
-      <li> <a href="https://www.youtube.com/watch?v=moP-FAijdIM">How to Use a Video Camera for Beginners by Think Media</a></li>
-      <li> <a href="https://fontawesome.com/v4/icon/camera-retro">Header Camera Icon by FontAwesome.com</a></li>
+      <li> <a href="https://pokeapi.co/api/v2/pokemon?limit=1000">Pokemon API Website</a></li>
     </ul>
   </div>  
-
-  <button class="accordion">Contact Me</button>
-  <div class="panel">
-    <ul>
-      <h2>If you'd like to contact me about my photography, please reach me at keenan@fakeemail.com</h2>
-    </ul>
-  </div>  
-
   
 
 <style>
@@ -250,14 +87,14 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(112, 0, 0);
+    background-color: rgb(205, 20, 109);
     color: white;
     text-align: center;
   }
   </style>
   
   <div class="footer">
-    <p>Keenan Fonger Photography Portfolio - CPRG-218-SA1</p>
+    <p>Keenan Fonger Lab 5 - CPRG-218-SA1</p>
   </div>
 
   <script src="scripts.js" defer></script>.
