@@ -1,0 +1,313 @@
+.remove-assignment-content {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-container {
+  background-color: rgb(255, 255, 255);
+  color: #fff;
+  height: 100vh;
+}
+
+.responsive {
+  width: 30%;
+  height: auto;
+}
+
+.responsive1 {
+  width: 25%;
+  height: auto;
+}
+.content-container {
+  background-color: #5d25e0;
+  height: 600px;
+}
+
+.accordion-container {
+  background-color: #fc7753;
+  color: #000000;
+  height: 600px;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(215, 28, 28, 0.5), rgba(226, 44, 44, 0.5)), url("photographyimages/heroimage.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.accordion {
+  background-color: #D4E79E;
+  color: rgb(252, 252, 252);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #B8C480;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #F1F7DE;
+  display: none;
+  overflow: hidden;
+}
+
+  
+
+.box {
+  border: 1px solid rgb(219, 27, 27);
+  text-align: center;
+  color:white;
+  padding: 10px;
+  margin: 10px;
+  background-color: #ce2b2b;
+}
+
+
+/* The hero image */
+.hero-image {
+/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1709653574992-205e5c314a49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+/* Set a specific height */
+height: 30%;
+
+/* Position and center the image to scale nicely on all screens */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #df5959;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #550000;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgb(255, 228, 228);
+  display: none;
+  overflow: hidden;
+  padding: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+a.button {
+  padding: 1px 6px;
+  border: 1px outset buttonborder;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(184, 255, 184);
+  text-decoration: none;
+}
+
+body {background-color: rgb(0, 0, 0);}
+
+
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-wrap: balance;
+    align-items: baseline;
+    row-gap: 30px;
+    column-gap: 15px;
+    flex-wrap:wrap;
+  }
+
+.card {
+    flex: 1 0 100%;
+    margin: 10px;   
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 calc(100% - 20px);
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 1 0 calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        flex: 1 0 calc(33% - 20px);
+    }
+}
+
+
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-wrap: balance;
+    align-items: baseline;
+    row-gap: 30px;
+    column-gap: 15px;
+    flex-wrap:wrap;
+  }
+
+.card {
+    flex: 1 0 100%;
+    margin: 10px;
+    text-align: center;   
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 0 calc(100% - 20px);
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 1 0 calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        flex: 1 0 calc(33% - 20px);
+    }
+}
+
+
+
+.card-container {
+    list-style-type: none}
+
+    .youtube-video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+     
+      .youtube-video-container::after {
+        display: block;
+        content: "";
+        padding-top: 56.25%;
+      }
+     
+      .youtube-video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 0.25rem;
+        box-shadow: 0rem 0.125rem 1.5rem rgb(0 0 0 / 12%);
+        width: 24rem;
+      }
+      
+      img {
+        border-bottom: 0.25rem solid rgb(255, 0, 0);
+        border-radius: 0.25rem 0.25rem 0 0;
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      @media screen and (min-width: 768px) {
+        img {
+          min-height: 15.5rem;
+        }
+      }
+      
+      @media screen and (min-width: 1200px) {
+        img {
+          min-height: 16.375rem;
+        }
+      }
+      
+      .card-content {
+        padding: 1rem;
+        
+      }
+      
+      .header,
+      .subheader {
+        margin: 0;
+      }
