@@ -21,24 +21,40 @@ h2 {
 .dropdown-container {
 
     flex-basis: calc(33% - 20px);
-
     margin-bottom: 20px;
-
     max-width: 300px; /* Limit maximum width of dropdown container */
 
 }
  
+.pokemonimage {
+
+  text-align: center;
+
+}
+
 h3 {
 
     margin-bottom: 5px;
+    color:rgb(255, 244, 28);
 
 }
  
+
+h1
+{
+
+  text-align: center;
+  color:rgb(12, 69, 123);
+
+}
+
+
+
 .card {
 
     padding: 20px;
 
-    border: 5px solid #ccc;
+    border: 5px solid #f2ff02;
 
     border-radius: 5px;
 
@@ -67,7 +83,7 @@ h2 {
 #pokemonSelect {
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   margin-bottom: 20px;
 }
@@ -108,97 +124,17 @@ h2 {
   width: 25%;
   height: auto;
 }
-.content-container {
-  background-color: #5d25e0;
-  height: 600px;
-}
+
 
 
 body, html {
   height: 100%;
   margin: 0;
-}
-
-.hero-image {
-  background-image: linear-gradient(rgba(215, 28, 28, 0.5), rgba(226, 44, 44, 0.5)), url("photographyimages/heroimage.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-
-.panel {
-  padding: 0 18px;
-  background-color: #F1F7DE;
-  display: none;
-  overflow: hidden;
-}
-
-  
-
-.box {
-  border: 1px solid rgb(219, 27, 27);
-  text-align: center;
-  color:white;
-  padding: 10px;
-  margin: 10px;
-  background-color: #ce2b2b;
-}
-
-
-/* The hero image */
-.hero-image {
-/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1709653574992-205e5c314a49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-
-/* Set a specific height */
-height: 30%;
-
-/* Position and center the image to scale nicely on all screens */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-}
-
-
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: rgb(255, 228, 228);
-  display: none;
-  overflow: hidden;
-  padding: 18px;
-  width: 100%;
   text-align: center;
 }
 
 
-a.button {
-  padding: 1px 6px;
-  border: 1px outset buttonborder;
-  border-radius: 3px;
-  color: white;
-  background-color: rgb(184, 255, 184);
-  text-decoration: none;
-}
-
-body {background-color: rgb(231, 87, 87);}
-
-
-.card-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    text-wrap: balance;
-    align-items: baseline;
-    row-gap: 30px;
-    column-gap: 60px;
-    flex-wrap:wrap;
-  }
+body {background-color: rgb(235, 95, 95);}
 
 
 @media (max-width: 768px) {
